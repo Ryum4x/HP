@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { getDestination, destinations } from '../data/destinations'
+import PageMeta from '../components/PageMeta'
 
 function DestinationDetail() {
   const { slug } = useParams()
@@ -24,6 +25,12 @@ function DestinationDetail() {
 
   return (
     <>
+      <PageMeta
+        title={destination.name}
+        description={destination.intro.slice(0, 120) + '...'}
+        path={`/destinations/${destination.slug}`}
+        image={destination.heroImage}
+      />
       <section className="relative min-h-[55vh] overflow-hidden sm:min-h-[65vh]">
         <img
           src={destination.heroImage}

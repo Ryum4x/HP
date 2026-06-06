@@ -1,4 +1,5 @@
 import PageHeader from '../components/PageHeader'
+import PageMeta from '../components/PageMeta'
 
 const values = [
   {
@@ -18,6 +19,11 @@ const values = [
 function About() {
   return (
     <>
+      <PageMeta
+        title="私たちについて"
+        description="日本紀行は、日本の魅力を深く味わえる旅をデザインする旅行チームです。"
+        path="/about"
+      />
       <PageHeader
         eyebrow="私たちについて"
         title="小さなチームで、大きなおもてなし"

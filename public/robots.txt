@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nippon-kiko.onrender.com/sitemap.xml

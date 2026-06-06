@@ -1,10 +1,16 @@
 import PageHeader from '../components/PageHeader'
+import PageMeta from '../components/PageMeta'
 import DestinationCard from '../components/DestinationCard'
 import { destinations } from '../data/destinations'
 
 function Portfolio() {
   return (
     <>
+      <PageMeta
+        title="目的地"
+        description="富士山、東京、大阪、京都など人気スポットの詳細ガイド。旅の計画にお役立てください。"
+        path="/portfolio"
+      />
       <PageHeader
         eyebrow="目的地"
         title="人気スポットを詳しく知る"

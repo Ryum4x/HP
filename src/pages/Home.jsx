@@ -3,12 +3,21 @@ import HeroSection from '../components/home/HeroSection'
 import SpotCard from '../components/home/SpotCard'
 import GalleryStrip from '../components/home/GalleryStrip'
 import DestinationCard from '../components/DestinationCard'
+import TrustSection from '../components/home/TrustSection'
+import FaqSection from '../components/home/FaqSection'
+import PageMeta from '../components/PageMeta'
 import { experiences, featuredSpots } from '../data/japanSpots'
 import { destinations } from '../data/destinations'
+import { site } from '../config/site'
 
 function Home() {
   return (
     <>
+      <PageMeta
+        title=""
+        description={site.description}
+        path="/"
+      />
       <HeroSection />
       <GalleryStrip />
 
@@ -38,6 +47,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <TrustSection />
 
       <section className="bg-cream px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
@@ -168,6 +179,8 @@ function Home() {
         </div>
       </section>
 
+      <FaqSection />
+
       <section className="relative overflow-hidden bg-ink px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <img
           src={featuredSpots[5].image}
@@ -189,7 +202,7 @@ function Home() {
               to="/contact"
               className="btn-primary inline-flex items-center rounded-full bg-vermillion px-8 py-3.5 text-sm font-semibold text-white hover:bg-vermillion-dark"
             >
-              旅の相談を始める
+              無料で相談する
             </Link>
             <Link
               to="/about"
@@ -198,6 +211,13 @@ function Home() {
               私たちについて
             </Link>
           </div>
+          <p className="mt-6 text-sm text-white/50">
+            <a href={`tel:${site.phone.replace(/-/g, '')}`} className="hover:text-white">
+              {site.phone}
+            </a>
+            {' · '}
+            {site.businessHours}
+          </p>
         </div>
       </section>
     </>

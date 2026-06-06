@@ -1,4 +1,5 @@
 import PageHeader from '../components/PageHeader'
+import PageMeta from '../components/PageMeta'
 
 const services = [
   {
@@ -26,6 +27,11 @@ const services = [
 function Services() {
   return (
     <>
+      <PageMeta
+        title="サービス"
+        description="オーダーメイド旅程、テーマ別ツアー、現地サポートなど、あなたに合った旅のスタイルをご提案。"
+        path="/services"
+      />
       <PageHeader
         eyebrow="サービス"
         title="あなたに合った旅のスタイル"
